@@ -1,0 +1,35 @@
+body {
+    font-family: 'Inconsolata';
+    font-size: calc(20px + 0.4vw);
+
+    padding: 4vw;
+    padding-top: 2vw;
+    background-color: white;
+    color: black;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+}
+
+p {
+    margin-top: 4vh;
+}
+
+ul {
+    font-family: 'Inconsolata';
+    font-size: calc(20px + 0.4vw);
+
+    padding: 4vw;
+    padding-top: 2vw;
+    background-color: white;
+    color: black;
+    text-align: left;
+
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}

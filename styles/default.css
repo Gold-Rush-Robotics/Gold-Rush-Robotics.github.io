@@ -1,36 +1,47 @@
-body {
+*
+{
+    box-sizing: border-box;
+}
+
+body 
+{
     font-family: 'Inconsolata';
     font-size: calc(20px + 0.4vw);
 
-    padding: 4vw;
+    padding: 0;
     padding-top: 2vw;
     background-color: white;
     color: black;
     text-align: center;
+    margin: 0;
 }
 
-img {
+img 
+{
     width: 100%;
 }
 
-.smallerLogo{
+.smallerLogo
+{
     width: 100px;
     height: 100px;
     float: left top;
 }
 
-p {
+p 
+{
     margin-top: 4vh;
 }
 
-ul {
+ul 
+{
     font-family: 'Inconsolata';
     font-size: calc(20px + 0.4vw);
 
     padding: 4vw;
     padding-top: 2vw;
     color: black;
-    text-align: left;
+    text-align: left; 
 
     padding: 0;
     margin: 0;
@@ -39,31 +50,93 @@ ul {
     box-sizing: border-box;
 }
 
-nav{
+.navbar
+{
     background: #0E5740;
-    height: 80px;
-    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: flex-end;
 }
 
-nav ul{
-    float: left;
-    margin-left: 20px;
+.navbar-links ul
+{
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
 
-nav ul li{
-    display: inline-block;
-    line-height: 80px;
-    margin: 0 5px;
+.navbar-links li
+{
+    list-style: none;
 }
 
-nav ul li a{
+.navbar-links li a
+{
+    text-decoration: none;
     color: gold;
-    font-size: 48px;
-    padding: 13px 24px;
-    border-radius: 3px;
+    padding: 1rem;
+    display: block;
 }
 
-active,a:hover{
+.navbar-links li:hover
+{
     background: #11694d;
     transition: .5s;
+}
+
+.toggle-button
+{
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
+
+.toggle-button .bar
+{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media (max-width: 600px)
+{
+    .toggle-button
+    {
+        display: flex;
+    }
+
+    .navbar-links
+    {
+        display: none; 
+    }
+
+    .navbar
+    {
+        flex-direction: column;
+        align-items: flex-start
+    }
+
+    .navbar-links ul
+    {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links li
+    {
+        text-align: center;
+    }
+
+    .navbar-links li a 
+    {
+        padding: .5rem 1rem;
+        
+    }
 }

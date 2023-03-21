@@ -8,7 +8,7 @@ body
     font-family: 'Inconsolata';
     font-size: calc(20px + 0.4vw);
 
-    padding: 0;
+    padding: 2vw;
     padding-top: 2vw;
     background-color: white;
     color: black;
@@ -54,9 +54,8 @@ ul
 {
     background: #0E5740;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    justify-content: flex-end;
 }
 
 .navbar-links ul

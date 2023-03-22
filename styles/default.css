@@ -46,7 +46,6 @@ ul
     padding: 0;
     margin: 0;
     text-decoration: none;
-    list-style: none;
     box-sizing: border-box;
 }
 
@@ -63,6 +62,7 @@ ul
     margin: 0;
     padding: 0;
     display: flex;
+    list-style: none;
 }
 
 .navbar-links li
@@ -84,58 +84,17 @@ ul
     transition: .5s;
 }
 
-.toggle-button
+.upcoming-events ul
 {
-    position: absolute;
-    top: .75rem;
-    right: 1rem;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 20px;
+    background: #0E5740;
+    padding: 10px;
 }
 
-.toggle-button .bar
+.upcoming-events li
 {
-    height: 3px;
-    width: 100%;
-    background-color: white;
-    border-radius: 10px;
-}
-
-@media (max-width: 600px)
-{
-    .toggle-button
-    {
-        display: flex;
-    }
-
-    .navbar-links
-    {
-        display: none; 
-    }
-
-    .navbar
-    {
-        flex-direction: column;
-        align-items: flex-start
-    }
-
-    .navbar-links ul
-    {
-        width: 100%;
-        flex-direction: column;
-    }
-
-    .navbar-links li
-    {
-        text-align: center;
-    }
-
-    .navbar-links li a 
-    {
-        padding: .5rem 1rem;
-        
-    }
+    background: #11694d;
+    padding: 5px;
+    margin-left: 15px;
+    color: gold;
 }

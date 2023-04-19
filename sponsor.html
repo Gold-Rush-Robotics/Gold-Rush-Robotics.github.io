@@ -26,7 +26,21 @@
     </style>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	
+	<!-- Font Awesome -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  rel="stylesheet"
+/>
+
+<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	
+<link rel="stylesheet" type="text/css" href="assets/custom.css"
 
 	
 </head>
@@ -68,5 +82,150 @@
     </nav>
 
 <body>
+<!-- Hero -->
+<!-- Hero 1 - HCF Bootstrap 5 Component -->
+<section class="px-5 py-6 py-xxl-10 hcf-bp-center hcf-bs-cover hcf-overlay hcf-transform whiteText" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/Robot22-23.jpg'); padding-bottom: 20px;">
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center text-white">
+        <h1 class="display-3 fw-bold mb-3">Sponsor Info</h1>
+        <p class="lead mb-5">Help empower the next generation <div id="text" class="lead mb-5"> </div></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Hero -->
+<section>
+	 <br><br>
+	<p class="text-justify"><strong>Gold Rush Robotics</strong> is a student-led club at the University of North Carolina at Charlotte. Our mission is to bring together undergraduate students of all skill levels who share a passion for robotics. We provide
+a collaborative space for students to learn, grow, and network all while gaining valuable hands-on
+experience that will lead to future success in the industry.</p>
+	
+	<div class="container-fluid">
+		<div class="row">
+    		<div class="col-md-6">
+      			<div class="container-fluid">
+					<div class="row">
+    					<div class="col-md-12 col-s-12 col-xs-12" >
+      						<h3>Gold Rush Robotics</h3>
+    					</div>
+  					</div>
+					<div class="row">
+    					<div class="col-md-4 col-xs-4 col-s-4" >
+      						<h3>Skill Building</h3>
+    					</div>
+						<div class="col-md-8 col-s-8 col-xs-8" >
+      						<h3>Competitions</h3>
+    					</div>
+  					</div>
+					<div class="row">
+    					<div class="col-md-4 col-xs-4 col-s-4">
+      						<p>Workshops, Individual/<br>Group Projectss & interclub competitions</p>
+    					</div>
+						<div class="col-md-4 col-xs-4 col-s-4">
+      						<p>IEEE Southeast Con <strong> Main</strong> Hardware Competition</p>
+    					</div>
+						<div class="col-md-4 col-xs-4 col-s-4">
+      						<p>IEEE Southeast Con <strong> Open</strong> Hardware Competition</p>
+    					</div>
+  					</div>
+				</div>
+    		</div>
+    		<div class="col-md-6">
+      			<img src="assets/winning21.png">
+    		</div>
+  		</div>
+		<div class="row">
+			<div class="col-xs-3 col-s-3 col-md-3 col-lg-3 col-xl-3">
+				<img src="assets/Robot21-22.png">
+				<h5>2022 Southeast Con Hardware Competition Winnning Robot</h5>
+			</div>
+			<div class="col-xs-9 col-s-9 col-md-9 col-lg-9 col-xl-9" style="text-align: left">
+				<h2>What we do</h2>
+<p>To accommodate both experienced and inexperienced students, Gold Rush
+Robotics is organized into two sections: skill building and competition.
+The skill building programs offers activities to introduce club members to the
+basics of robotics. Such as: workshops led by experienced club members,
+Micromouse maze and line follower challenges, Arduino kits, and mini Battle
+	Bots. </p>
+<p>Our competition program gives club members the opportunity to compete
+against other universities from across the country. We have teams
+participating in both IEEE Southeast Con Main Hardware Competition and IEEE
+Southeast Con Open Hardware Competition. These teams design and build a
+new robot every year to solve a set of challenges and then take their robot to
+competitions.</p>
+			
+			</div>
+		
+		
+		</div>
+	</div>
+	
+
+</section>
+
+
+
+<script type="text/javascript">
+
+// List of sentences
+var _CONTENT = [ "Roboticists", "Engineers", "Computer Programmers", "Leaders" ];
+
+// Current sentence being processed
+var _PART = 0;
+
+// Character number of the current sentence being processed 
+var _PART_INDEX = 0;
+
+// Holds the handle returned from setInterval
+var _INTERVAL_VAL;
+
+// Element that holds the text
+var _ELEMENT = document.querySelector("#text");
+
+// Implements typing effect
+function Type() { 
+	var text = "Of " + _CONTENT[_PART].substring(0, _PART_INDEX + 1);
+	_ELEMENT.innerHTML = text;
+	_PART_INDEX++;
+
+	// If full sentence has been displayed then start to delete the sentence after some time
+	if(text === "Of " + _CONTENT[_PART]) {
+		clearInterval(_INTERVAL_VAL);
+		setTimeout(function() {
+			_INTERVAL_VAL = setInterval(Delete, 50);
+		}, 1000);
+	}
+}
+
+// Implements deleting effect
+function Delete() {
+	var text = "Of ".concat(_CONTENT[_PART].substring(0, _PART_INDEX - 1));
+	_ELEMENT.innerHTML = text;
+	_PART_INDEX--;
+
+	// If sentence has been deleted then start to display the next sentence
+	if(text === 'Of ') {
+		clearInterval(_INTERVAL_VAL);
+
+		// If last sentence then display the first one, else move to the next
+		if(_PART == (_CONTENT.length - 1))
+			_PART = 0;
+		else
+			_PART++;
+		_PART_INDEX = 0;
+
+		// Start to display the next sentence after some time
+		setTimeout(function() {
+			_INTERVAL_VAL = setInterval(Type, 25);
+		}, 200);
+	}
+}
+
+// Start the typing effect on load
+_INTERVAL_VAL = setInterval(Type, 25);
+
+</script>
 </body>
 </html>
